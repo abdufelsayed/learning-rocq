@@ -1,0 +1,25 @@
+# Rocq compilation artifacts
+*.aux
+*.glob
+*.vo
+*.vok
+*.vos
+*.vot
+
+# Generated Rocq makefiles
+Makefile.coq
+Makefile.coq.conf
+.filestoinstall
+.Makefile.coq.d
+
+# Optional Rocq profiling and formatting outputs
+*.before-timing
+*.after-timing
+*.timing
+*.timing.diff
+*.v.beautified
+*.v.old
+*.vo.prof.json
+*.vo.prof.json.gz
+*.required_vo
+*.required_vos
