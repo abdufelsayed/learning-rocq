@@ -186,20 +186,20 @@ Definition minus_two (n : nat) : nat :=
 
 Compute (minus_two 4).
 
-Fixpoint is_even (n : nat) : bool :=
+Fixpoint even (n : nat) : bool :=
   match n with
   | O        => true
   | S O      => false
-  | S (S n') => is_even n'
+  | S (S n') => even n'
   end.
 
-Definition is_odd (n : nat) : bool :=
-  negb (is_even n).
+Definition odd (n : nat) : bool :=
+  negb (even n).
 
-Example test_odd2: is_odd 1 = true.
+Example test_odd2: odd 1 = true.
 Proof. simpl. reflexivity. Qed.
 
-Example test_odd4: is_odd 4 = false.
+Example test_odd4: odd 4 = false.
 Proof. simpl. reflexivity. Qed.
 
 Fixpoint plus (n : nat) (m : nat) : nat :=
@@ -207,8 +207,6 @@ Fixpoint plus (n : nat) (m : nat) : nat :=
   | O    => m
   | S n' => S (plus n' m)
   end.
-
-Notation "x + y" := (plus x y).
 
 Compute (plus 4 3).
 
